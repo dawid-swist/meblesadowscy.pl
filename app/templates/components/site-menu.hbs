@@ -1,0 +1,7 @@
+<nav id="home" class="white" role="navigation">
+  {{#md-navbar name=menuId class=cssClass}}
+    {{#each menu as |menuElement| }}
+        {{#link-to menuElement.menuLink tagName=menuTag}}{{link-to menuElement.menuLabel}}{{/link-to}}
+    {{/each}}
+  {{/md-navbar}}
+</nav>

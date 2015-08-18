@@ -6,6 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('home');
+  this.route('oFirmie');
+  this.route('oferta');
+  this.route('referencje');
+  this.route('wspolpraca');
+  this.route('kontakt');
 });
 
 export default Router;

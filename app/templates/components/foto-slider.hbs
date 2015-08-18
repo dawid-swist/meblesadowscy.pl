@@ -1,0 +1,15 @@
+<!-- BANNER -->
+<div id="id-banner" class="slider section">
+    <ul class="slides white">
+      {{#each silderElements as |element| }}
+          <li>
+              <img class="responsive-img" src={{ element.image }}>
+
+              <div class="caption center-align red-text darken-4">
+                  <h3 class="">{{element.title}}</h3>
+                  <h5 class="light">{{element.email}}<br/>{{element.address}}</h5>
+              </div>
+          </li>
+      {{/each}}
+    </ul>
+</div>
