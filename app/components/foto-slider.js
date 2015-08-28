@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-
   silderElements: [
     {
       image: 'http://lorempixel.com/580/250/nature/1',
