@@ -1,12 +1,11 @@
 <nav id="home" class="white" role="navigation">
-  {{#md-navbar name=menuId class=cssClass}}
-
-    {{ log "menuElements=" menuElements }}
-
+  {{#md-navbar name=menuId class=cssClass }}
     {{#each menuElements as |menuElement| }}
-
-        {{  log 'menuLink:' menuElement.menuLink }}
-        {{#link-to menuElement.menuLink tagName=menuTag}}{{link-to menuElement.menuLabel}}{{/link-to}}
+          {{#link-to 'mainPage.nav' menuElement.menuLink tagName='li' }}
+              {{#link-to 'mainPage.nav' (query-params anchor=menuElement.menuLink)}}
+                {{ menuElement.menuLabel }}
+              {{/link-to}}
+          {{/link-to}}
     {{/each}}
   {{/md-navbar}}
 </nav>

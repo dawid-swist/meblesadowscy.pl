@@ -4,13 +4,20 @@ export default Ember.Component.extend({
 
   menuId: 'meblesadowscy.pl',
   menuTag: 'li',
-  cssClass: ''
+  articleRouteName: 'mainPage.nav',
+  cssClass: '',
+  jumpToAnchor: function(){
+    var $=Ember.$;
+    $('div').animate({
+      scrollTop: $('#o_firmie').offset().top //offset if required
+    }, 600);
+  },
 
-//  menu: [
-//    {menuLink: 'index', menuLabel: 'home'},
-//    {menuLink: 'index', menuLabel: 'o Firmie'},
-//    {menuLink: 'index', menuLabel: 'Oferta'},
-//    {menuLink: 'index', menuLabel: 'Współpraca'},
-//    {menuLink: 'index', menuLabel: 'Kontakt'}
-//]
+  actions : {
+
+  pressed : function() {
+    this.jumpToAnchor();
+  }
+}
+
 });

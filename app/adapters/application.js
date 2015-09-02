@@ -9,6 +9,5 @@ export default DS.RESTAdapter.extend({
     'Access-Control-Allow-Origin': '*',
     'Origin': 'localhost',
     'Access-Control-Allow-Methods': 'POST, GET, OPTIONS'
-
   }
 });

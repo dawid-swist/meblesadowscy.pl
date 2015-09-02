@@ -9,8 +9,11 @@ export default DS.Model.extend({
     return this.get('ShortUrl');
   }),
 
+  menuLinkID: Ember.computed('ShortUrl', function () {
+    return "#"+this.get('ShortUrl');
+  }),
+
   menuLabel: Ember.computed('title', function () {
     return this.get('title');
   })
-
 });

@@ -1,0 +1,11 @@
+{{site-menu menuElements=menu linkToRouter='index.article'}}
+{{foto-slider }}
+{{ ms-products }}
+
+{{#each articles as |item| }}
+
+  {{ section-article titleID=item.ShortUrl body=item.Body title=item.title classTypes='cyan lighten-4 card-panel hoverable' }}
+
+{{/each }}
+
+{{outlet}}
