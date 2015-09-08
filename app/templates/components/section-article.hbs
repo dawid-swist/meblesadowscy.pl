@@ -1,12 +1,16 @@
 <div class={{ classTypes }}>
     <div id={{ titleID }} class="section">
-
         <div class="row">
             <div class="col s12 center">
                 <h4>{{ title }}</h4>
-
                 <p class="left-align light">
-                  {{{ body }}}
+
+                  {{#if imageUrl}}
+                    <div class='col s4'>
+                      <img src={{ imageUrl }} alt={{ imageAlt }} class="responsive-img">
+                    </div>
+                  {{/if}}
+                    <div class="col s8">{{{ body }}}</div>
                 </p>
             </div>
         </div>

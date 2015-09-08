@@ -4,7 +4,14 @@
 
 {{#each articles as |item| }}
 
-  {{ section-article titleID=item.ShortUrl body=item.Body title=item.title classTypes='cyan lighten-4 card-panel hoverable' }}
+  {{ section-article
+    titleID=item.ShortUrl
+    body=item.Body
+    title=item.title
+    imageUrl=item.ImageUrl
+    imageAlt=item.ImageAlt
+    backgroundColor=item.BackgroundColorCss
+   }}
 
 {{/each }}
 

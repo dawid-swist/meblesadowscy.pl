@@ -1,8 +1,8 @@
 <nav id="home" class="white" role="navigation">
   {{#md-navbar name=menuId class=cssClass }}
     {{#each menuElements as |menuElement| }}
-          {{#link-to 'mainPage.nav' menuElement.menuLink tagName='li' }}
-              {{#link-to 'mainPage.nav' (query-params anchor=menuElement.menuLink)}}
+          {{#link-to menuElement.routeName menuElement.menuLink tagName='li' }}
+              {{#link-to menuElement.routeName menuElement.menuLink}}
                 {{ menuElement.menuLabel }}
               {{/link-to}}
           {{/link-to}}
