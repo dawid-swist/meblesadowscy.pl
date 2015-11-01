@@ -1,18 +1,3 @@
-{{site-menu menuElements=menu linkToRouter='index.article'}}
 {{foto-slider }}
 {{ ms-products }}
-
-{{#each articles as |item| }}
-
-  {{ section-article
-    titleID=item.ShortUrl
-    body=item.Body
-    title=item.title
-    imageUrl=item.ImageUrl
-    imageAlt=item.ImageAlt
-    backgroundColor=item.BackgroundColorCss
-   }}
-
-{{/each }}
-
 {{outlet}}

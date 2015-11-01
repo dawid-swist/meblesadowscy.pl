@@ -7,7 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('mainPage', {path: '/web'}, function () {
-    this.route('nav',{ path: '/:article_name',queryParams: ['anchor']});
+    this.route('nav',{ path: '/:article_name'});
   });
 });
 
