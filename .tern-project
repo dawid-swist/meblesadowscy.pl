@@ -1,7 +1,23 @@
 {
+  "ecmaVersion": 6,
   "libs": [
-    "browser",
-    "ecma5",
-    "ecma6"
-  ]
+    "browser"
+  ],
+  "loadEagerly": [
+    "app/*/*.js",
+    "bower_components/*/*.js",
+    "app/*.js"
+  ],
+  "dontLoad": [
+  ],
+  "plugins": {
+    "complete_strings": {},
+    "node": {},
+    "lint": {},
+    "requirejs": {},
+    "es_modules": {},
+    "doc_comment": {
+      "fullDocs": true
+    }
+  }
 }
