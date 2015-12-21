@@ -6,4 +6,5 @@ export default Ember.Component.extend({
   menuTag: 'li',
   articleRouteName: 'mainPage.nav',
   cssClass: ''
+
 });

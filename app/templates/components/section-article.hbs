@@ -4,13 +4,14 @@
             <div class="col s12 center">
                 <h4>{{ title }}</h4>
                 <p class="left-align light">
-
                   {{#if imageUrl}}
                     <div class='col s4'>
                       <img src={{ imageUrl }} alt={{ imageAlt }} class="responsive-img">
                     </div>
+                    <div class="col s8 article">{{{ body }}}</div>
+                  {{else}}
+                    <div class="col s12 article">{{{ body }}}</div>
                   {{/if}}
-                    <div class="col s8">{{{ body }}}</div>
                 </p>
             </div>
         </div>

@@ -3,6 +3,6 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   beforeModel: function() {
-     this.transitionTo('mainPage');
+     this.transitionTo('mainPage.home');
    }
 });

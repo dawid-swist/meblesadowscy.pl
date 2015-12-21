@@ -1,14 +1,16 @@
-import Ember from 'ember';
+  import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
     return Ember.RSVP.hash({
       articles: this.store.find('article'),
-      // menu: this.store.find('menuElement')
+      sliders: this.store.find('slider'),
+      products: this.store.find('product')
     });
   },
   setupController: function(controller, model) {
-    // controller.set('menu',model.menu);
     controller.set('articles', model.articles);
+    controller.set('sliders', model.sliders);
+    controller.set('products', model.products);
   }
 });

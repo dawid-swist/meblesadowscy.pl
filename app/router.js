@@ -7,7 +7,8 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('mainPage', {path: '/web'}, function () {
-    this.route('nav',{ path: '/:article_name'});
+    this.route('nav',{ path: '/:article_id'});
+    this.route('home',{ path: '/home'});
   });
 });
 

@@ -20,5 +20,9 @@ export default DS.Model.extend({
 
   routeName: Ember.computed('title', function () {
     return this.get('RouterName');
+  }),
+
+  isShortUrlPresents: Ember.computed('ShortUrl', function () {
+    return (this.get('ShortUrl') !== "/");
   })
 });
