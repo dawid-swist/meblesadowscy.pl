@@ -4,7 +4,7 @@ export default Ember.Route.extend({
 
   model: function() {
     return Ember.RSVP.hash({
-      menu: this.store.find('menuElement')
+      menu: this.store.findAll('menuElement')
     });
   },
 

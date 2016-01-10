@@ -3,9 +3,9 @@
 export default Ember.Route.extend({
   model: function() {
     return Ember.RSVP.hash({
-      articles: this.store.find('article'),
-      sliders: this.store.find('slider'),
-      products: this.store.find('product')
+      articles: this.store.findAll('article'),
+      sliders: this.store.findAll('slider'),
+      products: this.store.findAll('product')
     });
   },
   setupController: function(controller, model) {
