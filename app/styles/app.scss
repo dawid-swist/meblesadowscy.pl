@@ -1,12 +1,11 @@
 // Example app.scss
 @import 'components/color';
 @import 'components/variables';
-
 // Custom color settings go here
 $primary-color: color("pink", "lighten-2");
-
 @import 'materialize';
-
 .article {
   line-height: 1;
+}
+.response-gallery {
 }

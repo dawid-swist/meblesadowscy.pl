@@ -1,0 +1,9 @@
+<div class="section row">
+    <div class="col s12 l6">
+      <h4 class="center-align">{{index}}</h4>
+      {{#each allReleatedProducts as |item|}}
+        <div class="col l4 m6 s12">{{product-card product=item linkName='product.gallery'}}</div>
+      {{/each}}
+    </div>
+</div>
+{{outlet}}
