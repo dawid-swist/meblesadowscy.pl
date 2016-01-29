@@ -22,7 +22,9 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
   app.import('./bower_components/materialize/bin/materialize.js');
-
-
+  app.import('./bower_components/photoswipe/dist/photoswipe.css');
+  app.import('./bower_components/photoswipe/dist/default-skin/default-skin.css');
+  app.import('./bower_components/photoswipe/dist/photoswipe.js');
+  app.import('./bower_components/photoswipe/dist/photoswipe-ui-default.js');
   return app.toTree();
 };

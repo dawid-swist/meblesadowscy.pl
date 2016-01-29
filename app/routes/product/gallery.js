@@ -9,5 +9,6 @@ export default Ember.Route.extend({
   },
   setupController: function(controller, model) {
     controller.set('curentProduct', model.curentProduct);
+    controller.set('imagesForPhotoSwipe',model.curentProduct.get('imagesForPhotoSwipe'));
   }
 });

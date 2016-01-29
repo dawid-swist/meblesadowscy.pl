@@ -3,7 +3,7 @@
     <div class="col s12 l6">
       <h4 class="center-align">{{index}}</h4>
       {{#each collectionOfCategories as |item|}}
-        <div class="col l4 m6 s12">{{product-card product=item.firstProduct linkName='product.show'}}</div>
+        <div class="col l4 m6 s12">{{product-card product=item.firstProduct linkName='product.show' description=item.firstProduct.ProductType}}</div>
       {{/each}}
     </div>
   {{/each}}

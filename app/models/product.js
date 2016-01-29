@@ -23,6 +23,22 @@ export default DS.Model.extend({
     return imagesCollectionForView;
   }),
 
+  imagesForPhotoSwipe: Ember.computed('Images', function() {
+    var imagesSize = this.get('Images').length;
+    var imagesCollection = [];
+
+    for (var i = 0; i < imagesSize; i++) {
+      imagesCollection.push({
+        src: this.get('Images')[i].src,
+        w: 1600,
+        h: 1200,
+        pid: i.toString()
+      });
+    }
+    return imagesCollection;
+  }),
+
+
   firstThumbiail: Ember.computed('imagesForView', function() {
     return this.get('imagesForView')[0].thumbnail;
   }),
