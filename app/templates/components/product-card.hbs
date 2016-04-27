@@ -1,14 +1,8 @@
-{{#link-to linkName product.id}}
-<div class="card z-depth-2">
-  <div class="card-image hoverable">
-    <img class="responsive-img" src="{{product.firstThumbiail}}">
-    <span class="card-title">{{description}}</span>
+{{#link-to 'product.show' product.name}}
+  <div class="card z-depth-2">
+    <div class="card-image hoverable">
+      <img class="responsive-img" src="{{product.pictureUrl}}">
+      <span class="card-title">{{product.name}}</span>
+    </div>
   </div>
-  {{!-- <div class="card-content">
-    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-  </div> --}}
-  {{!-- <div class="card-action">
-    <a href="#">This is a link</a>
-  </div> --}}
-</div>
 {{/link-to}}

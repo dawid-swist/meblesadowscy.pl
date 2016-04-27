@@ -1,9 +1,9 @@
 <div class="section row">
-  {{#each sortedCollectionOfProducts as |collectionOfCategories index|}}
+  {{#each Categories as | productCategory |}}
     <div class="col s12 l6">
-      <h4 class="center-align">{{index}}</h4>
-      {{#each collectionOfCategories as |item|}}
-        <div class="col l4 m6 s12">{{product-card product=item.firstProduct linkName='product.show' description=item.firstProduct.ProductType}}</div>
+      <h4 class="center-align">{{productCategory.name}}</h4>
+      {{#each productCategory.productTypes as | productType |}}
+        <div class="col l6 m6 s12">{{product-card product=productType}}</div>
       {{/each}}
     </div>
   {{/each}}

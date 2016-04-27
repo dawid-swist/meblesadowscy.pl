@@ -2,33 +2,16 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-  sortedCollectionOfProducts: Ember.computed('products', function() {
-    return this.get('products').reduce((previous, elem) => {
-      var collection = previous;
+  Categories: Ember.computed('productTypes', 'productCategories', function() {
 
-      let curCategory = elem.get('Category');
-      let curProductType = elem.get('ProductType');
+    let productCategories = this.get('productCategories');
+    let productTypes = this.get('productTypes');
 
-      var curElementOfCollection;
-
-      if (false === collection.has(curCategory)) {
-        collection.set(curCategory, Ember.Map.create(curProductType, {
-          firstProduct: elem,
-        }));
-
-        return collection;
-      }
-
-      curElementOfCollection = collection.get(curCategory);
-
-      if (false === curElementOfCollection.has(curProductType)) {
-        curElementOfCollection.set(curProductType, {
-          firstProduct: elem
-        });
-        return collection;
-      }
-
-      return collection;
-    }, Ember.Map.create());
+    return productCategories.map(function(item) {
+      return {
+        name: item.get('name'),
+        productTypes: productTypes.filterBy('categorii', item.get("name"))
+      };
+    });
   }),
 });

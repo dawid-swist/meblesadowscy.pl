@@ -3,16 +3,29 @@
   export default Ember.Route.extend({
     model: function() {
       return Ember.RSVP.hash({
-        articles: this.store.findAll('article'),
         sliders: this.store.findAll('slider'),
-        products: this.store.findAll('product'),
-        // productCategories: this.store.findAll('productCategory')
+        productTypes: this.store.findAll('productType'),
+        productCategories: this.store.findAll('productCategory')
       });
     },
+
     setupController: function(controller, model) {
-      controller.set('articles', model.articles);
+
+      // let categorii = this.calculateCategorii(model);
+
+      // controller.set('categorii', categorii);
       controller.set('sliders', model.sliders);
-      controller.set('products', model.products);
-      // controller.set('productCategories', model.productCategories);
+      controller.set('productTypes', model.productTypes);
+      controller.set('productCategories', model.productCategories);
+    },
+
+    calculateCategorii: function(model) {
+      return model.productCategories.map(function(item) {
+        return {
+          name: item.get('name'),
+          productTypes: model.productTypes.filterBy('categorii', item.get("name"))
+        };
+      });
     }
+
   });

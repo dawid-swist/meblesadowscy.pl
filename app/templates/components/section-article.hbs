@@ -5,12 +5,12 @@
                 <h4>{{ title }}</h4>
                 <p class="left-align light">
                   {{#if imageUrl}}
-                    <div class='col s4'>
+                    <div class='col l4 s12'>
                       <img src={{ imageUrl }} alt={{ imageAlt }} class="responsive-img">
                     </div>
-                    <div class="col s8 article">{{{ body }}}</div>
+                    <div class="col l8 s12 article flow-text">{{{ body }}}</div>
                   {{else}}
-                    <div class="col s12 article">{{{ body }}}</div>
+                    <div class="col s12 article flow-text">{{{ body }}}</div>
                   {{/if}}
                 </p>
             </div>

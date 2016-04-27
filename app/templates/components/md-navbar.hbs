@@ -1,14 +1,14 @@
 <div class='nav-wrapper'>
-    <div class='container'>
-      {{#link-to homeRoute class='brand-logo'}}{{name}}{{/link-to}}
-        <ul class='right hide-on-med-and-down'>
-          {{yield}}
-        </ul>
-    </div>
+  <div class='container'>
+    {{#link-to homeRoute class='brand-logo' }}{{name}}{{/link-to}}
+    <ul class='right hide-on-med-and-down'>
+      {{yield}}
+    </ul>
+  </div>
 
-    <a class='button-collapse' data-activates="{{_sideNavId}}">
-        <i class='mdi-navigation-menu'></i>
-    </a>
+  <a class='button-collapse' data-activates="{{_sideNavId}}">
+    <i class='mdi-navigation-menu material-icons'>view_headline</i>
+  </a>
 </div>
 
 <ul id="{{_sideNavId}}" class='side-nav'>

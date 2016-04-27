@@ -11,7 +11,6 @@ export default DS.Model.extend({
   'Image': DS.attr(),
   'BackgroundColor': DS.attr(),
   'ColorTone': DS.attr(),
-
   'ImageUrl': Ember.computed('Image', function() {
     var image = this.get('Image');
 
@@ -32,7 +31,7 @@ export default DS.Model.extend({
     }
   }),
 
-  'BackgroundColorCss': Ember.computed(['BackgroundColor', 'ColorTone'], function() {
+  'BackgroundColorCss': Ember.computed('BackgroundColor', 'ColorTone', function() {
     var color = this.get('BackgroundColor');
     var tone = this.get('ColorTone');
 

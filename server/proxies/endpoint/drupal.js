@@ -14,7 +14,7 @@ module.exports = function(app) {
     // include root path in proxied request
     req.url = proxyPath + '/' + req.url;
     proxy.web(req, res, {
-      target: 'http://serwer1570103.home.pl',
+      target: 'http://meblesadowscy.usermd.net',
       changeOrigin: true
     });
   });
