@@ -1,7 +1,7 @@
 // Example app.scss
 @import 'components/color';
 @import 'components/variables'; // Custom color settings go here
-$primary-color: color("pink", "lighten-2");
+$primary-color: color("light-blue", "darken-1");
 @import 'materialize';
 .article {
   line-height: 1;
@@ -261,4 +261,8 @@ div.password-suggestions ul {
 }
 .ibimage_right {
   float: right;
+}
+
+.product_card_solid_border:hover {
+  border-style: ridge;
 }

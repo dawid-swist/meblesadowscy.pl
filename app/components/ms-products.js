@@ -4,8 +4,8 @@ export default Ember.Component.extend({
 
   Categories: Ember.computed('productTypes', 'productCategories', function() {
 
-    let productCategories = this.get('productCategories');
-    let productTypes = this.get('productTypes');
+    var productCategories = this.get('productCategories');
+    var productTypes = this.get('productTypes');
 
     return productCategories.map(function(item) {
       return {
