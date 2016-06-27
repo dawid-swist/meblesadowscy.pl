@@ -2,16 +2,16 @@ import DS from 'ember-data';
 import Ember from 'ember';
 
 export default DS.Model.extend({
-  'title': _emberData['default'].attr('string'),
-  'Language': _emberData['default'].attr('string'),
-  'Body': _emberData['default'].attr('string'),
-  'isContents ': _emberData['default'].attr('boolean'),
-  'Priority': _emberData['default'].attr('number'),
-  'ShortUrl': _emberData['default'].attr('string'),
-  'Image': _emberData['default'].attr(),
-  'BackgroundColor': _emberData['default'].attr(),
-  'ColorTone': _emberData['default'].attr(),
-  'ImageUrl': _ember['default'].computed('Image', function() {
+  'title': DS.attr('string'),
+  'Language': DS.attr('string'),
+  'Body': DS.attr('string'),
+  'isContents ': DS.attr('boolean'),
+  'Priority': DS.attr('number'),
+  'ShortUrl': DS.attr('string'),
+  'Image': DS.attr(),
+  'BackgroundColor': DS.attr(),
+  'ColorTone': DS.attr(),
+  'ImageUrl': Ember.computed('Image', function() {
     var image = this.get('Image');
 
     if (image) {
@@ -21,7 +21,7 @@ export default DS.Model.extend({
     }
   }),
 
-  'ImageAlt': _ember['default'].computed('Image', function() {
+  'ImageAlt': Ember.computed('Image', function() {
     var image = this.get('Image');
 
     if (image) {
@@ -31,7 +31,7 @@ export default DS.Model.extend({
     }
   }),
 
-  'BackgroundColorCss': _ember['default'].computed('BackgroundColor', 'ColorTone', function() {
+  'BackgroundColorCss': Ember.computed('BackgroundColor', 'ColorTone', function() {
     var color = this.get('BackgroundColor');
     var tone = this.get('ColorTone');
 

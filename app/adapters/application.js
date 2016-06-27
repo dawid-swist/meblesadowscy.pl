@@ -8,10 +8,33 @@ export default DS.RESTAdapter.extend({
     return config.cmsEndPointUrlPrefix + '/?q=' + this.lang + '/' + config.cmsEndPointJsonPrefix;
   }),
 
-  shouldReloadAll: function() {
+
+  /**
+   * @method urlForQueryRecord
+   * @param {Object} query
+   * @param {String} modelName
+   * @return {String} url
+   */
+  urlForQuery: function urlForQuery(query, modelName) {
+    var postfixUrl = this._calculateParamsAdPostFixUrl(query);
+    return this._buildURL(modelName) + postfixUrl;
+  },
+
+  _calculateParamsAdPostFixUrl: function _calculateParamsAdPostFixUrl(parameters) {
+    var postFixUrl = "";
+    if (parameters) {
+      for (var param in parameters) {
+        postFixUrl = postFixUrl + "/" + param + "/" + parameters[param];
+      }
+    }
+    return postFixUrl;
+  },
+
+  shouldReloadAll: function shouldReloadAll() {
     return true;
   },
-  shouldBackgroundReloadRecord: function() {
+  shouldBackgroundReloadRecord: function shouldBackgroundReloadRecord() {
     return true;
   }
+
 });
