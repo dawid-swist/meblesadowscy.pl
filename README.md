@@ -26,7 +26,12 @@ You will need the following things properly installed on your computer.
 ## Install atom IDE
 
 * Download and install atom IDE from www.atom.io
-* Install atom plugin `apm install atom-beautify atom-handlebars atom-ternjs autocomplete-modules autocomplete-paths change-case ember-snippets emmet file-icons git-plus highlight-line javascript-snippets jshint language-babel language-ember-htmlbars linter linter-csslint merge-conflicts minimap`
+* Install atom plugin 
+    ```
+        apm install atom-beautify atom-handlebars atom-ternjs autocomplete-modules autocomplete-paths 
+        apm install change-case ember-snippets emmet file-icons git-plus highlight-line javascript-snippets 
+        apm install jshint language-babel language-ember-htmlbars linter linter-csslint merge-conflicts minimap
+    ```
 
 ### Code Generators
 
