@@ -3,7 +3,7 @@
     <h4 class="center-align">{{index}}</h4>
     {{#each allReleatedProducts as |item|}}
       <div class="col l2 m4 s6">
-        {{product-card product=item linkName='product.gallery' description=item.Title }}
+        {{product-card link_id=item.id linkName='product.gallery' description=item.Title pictureUrl=item.firstThumbiail }}
       </div>
     {{/each}}
   </div>

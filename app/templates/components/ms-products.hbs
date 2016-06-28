@@ -1,9 +1,9 @@
 <div class="section row">
   {{#each Categories as | productCategory |}}
-    <div class="col s12 l6">
+    <div class="col s12 l6  z-depth-1 grey lighten-5">
       <h4 class="center-align">{{productCategory.name}}</h4>
       {{#each productCategory.productTypes as | productType |}}
-        <div class="col l6 m6 s12">{{product-card product=productType}}</div>
+        <div class="col l6 m6 s12">{{product-card linkName='product.show' link_id=productType.id description=productType.name pictureUrl=productType.pictureUrl }}</div>
       {{/each}}
     </div>
   {{/each}}

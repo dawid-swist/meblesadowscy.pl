@@ -10,7 +10,7 @@ Router.map(function () {
     this.route('nav', { path: '/:article_id' });
     this.route('home', { path: '/home' });
   });
-  this.route('product', { path: 'product' }, function () {
+  this.route('product', { path: '/product' }, function () {
     this.route('show', { path: '/:product_type' });
     this.route('gallery', { path: '/gallery/:product_id' });
   });
