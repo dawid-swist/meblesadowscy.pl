@@ -1,12 +1,9 @@
 # Meblesadowscy-pl
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
-
+This source code for meblesadowscy.pl site.
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
-
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM)
 * [Bower](http://bower.io/)
@@ -15,15 +12,21 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone git@gitlab.com:dawid.swist/meblesadowscy.pl.git` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
+* Install nodejs package`sudo npm -g install tern jshint`
 
 ## Running / Development
 
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
+
+## Install atom IDE
+
+* Download and install atom IDE from www.atom.io
+* Install atom plugin `apm install atom-beautify atom-handlebars atom-ternjs autocomplete-modules autocomplete-paths change-case ember-snippets emmet file-icons git-plus highlight-line javascript-snippets jshint language-babel language-ember-htmlbars linter linter-csslint merge-conflicts minimap`
 
 ### Code Generators
 
@@ -50,4 +53,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
