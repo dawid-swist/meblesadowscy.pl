@@ -1,6 +1,6 @@
 # Meblesadowscy-pl
 
-This source code for meblesadowscy.pl site.
+This source code for www.meblesadowscy.pl site.
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
