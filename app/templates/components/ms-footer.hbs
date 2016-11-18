@@ -1,18 +1,23 @@
-{{yield}}
+{{!-- {{pure-html footer}} --}}
 <footer class="page-footer grey lighten-5">
   <div class="container">
     <div class="row">
-      <div class="col l6 s12">
-        <h4 class="black-text">Meble Sadowscy</h4>
+      {{!-- <div class="col l6 s12"> --}}
+      <div class="{{footer.class_left}}">
+        {{!-- <h4 class="black-text">Meble Sadowscy</h4>
         <h5>Tel: (+48) 787759659
         <br>E-mail: info@meblesadowscy.pl
-      </h5></div>
-      <div class="col l4 offset-l2 s12">
-        <p class="black-text">
+      </h5></div> --}}
+      {{{footer.content_left}}}
+    </div>
+      {{!-- <div class="col l4 offset-l2 s12"> --}}
+      <div class="{{footer.class_right}}">
+        {{!-- <p>
           <a href="https://www.facebook.com/Meble-Sadowscy-443663819159861/timeline?ref=page_internal">
             <span class="flow-text">Zobacz nas na</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/50px-Facebook_icon.svg.png" height="50" width="50">
           </a>
-        </p>
+        </p> --}}
+          {{{footer.content_right}}}
       </div>
     </div>
   </div>
@@ -20,7 +25,6 @@
     <div class="container black-text darken-1-text">
       <div class="row">
         <div class="col l4">© 2014 - 2016 Copyright Meble Sadowscy &amp; Dawid Świst</div>
-        {{!-- <div class="col l8 r">Czy wiesz, że używamy cookies (ciasteczek)? Dowiedz się więcej o celu ich używania i zmianach ustawień. Korzystając ze strony i asystenta pobierania wyrażasz zgodę na używanie cookies, zgodnie z aktualnymi ustawieniami przeglądarki.</div> --}}
       </div>
     </div>
   </div>
