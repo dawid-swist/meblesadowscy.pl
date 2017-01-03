@@ -1,0 +1,23 @@
+<ul id="dropdown1" class="dropdown-content">
+  {{!--{{#link-to 'mainPage.home' (query-params lang="pl") tagName='li' class="center-align"}}PL{{/link-to}}
+  {{#link-to 'mainPage.home' (query-params lang="de") tagName='li' class="center-align"}}DE{{/link-to}}
+  {{#link-to 'mainPage.home' (query-params lang="en") tagName='li' class="center-align"}}EN{{/link-to}}--}}
+
+  {{!--<li>{{action "selectLang" 'pl'}}pl</li>
+  <li>{{action "selectLang" 'de'}}de</li>
+  <li>{{action "selectLang" 'en'}}en</li>--}}
+
+  <!--<li {{action 'selectLang' 'pl'}}>pl</li>-->
+  <!--<li {{action 'selectLang' 'de'}}>de</li>-->
+
+  <li><a href="/">pl</a></li>
+  <li><a href="/lang/de/">de</a></li>
+  <li><a href="/lang/en/">en</a></li>
+
+
+</ul>
+<div class="nav-wrapper">
+  <ul class="right hide-on-med-and-down">
+    <li><a class="dropdown-button" data-activates="dropdown1"><i class="material-icons right">arrow_drop_down</i>{{lang}}</a></li>
+  </ul>
+</div>

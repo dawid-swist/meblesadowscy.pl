@@ -1,19 +1,20 @@
 <nav id="home" class="white" role="navigation">
-  {{#md-navbar name=menuId class=cssClass }}
+   {{#md-navbar name=menuId class=cssClass }}
+   {{!--lang=lang--}}
     {{#each menuElements as |menuElement| }}
       {{#if menuElement.isShortUrlPresents}}
-            {{#link-to menuElement.routeName menuElement.menuLink tagName='li' }}
-                {{#link-to menuElement.routeName menuElement.menuLink}}
-                  {{ menuElement.menuLabel }}
-                {{/link-to}}
-            {{/link-to}}
+        {{#link-to menuElement.routeName menuElement.menuLink tagName='li' }}
+          {{#link-to menuElement.routeName menuElement.menuLink}}
+            {{ menuElement.menuLabel }}
+          {{/link-to}}
+        {{/link-to}}
       {{else}}
-        {{#link-to menuElement.routeName tagName='li' }}
-            {{#link-to menuElement.routeName}}
-              {{ menuElement.menuLabel }}
-            {{/link-to}}
+        {{#link-to menuElement.routeName tagName='li'}}
+          {{#link-to menuElement.routeName}}
+            {{ menuElement.menuLabel }}
+          {{/link-to}}
         {{/link-to}}
       {{/if}}
     {{/each}}
-  {{/md-navbar}}
+  {{/md-navbar}}  
 </nav>
